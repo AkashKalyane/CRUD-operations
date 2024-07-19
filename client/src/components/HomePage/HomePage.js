@@ -11,7 +11,7 @@ function HomePage() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/`);
+        const response = await fetch(`https://crud-operations-vtnz.onrender.com/api/`);
         const responseData = await response.json();
         setLoadedData(responseData.users);
       } catch (err) {
