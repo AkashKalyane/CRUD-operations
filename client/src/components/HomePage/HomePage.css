@@ -1,0 +1,44 @@
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.centered-table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centered-table th,
+.centered-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.centered-table th {
+  background-color: #f2f2f2;
+  color: black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.centered-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.centered-table tr:hover {
+  background-color: #ddd;
+}
+
+td span {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
