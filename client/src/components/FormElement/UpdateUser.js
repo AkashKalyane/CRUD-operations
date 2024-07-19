@@ -38,7 +38,7 @@ function UpdateUser() {
     async function fetchUser() {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/user/${userId}`
+          `${process.env.REACT_APP_BACKEND_URL}/user/${userId}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch user");
@@ -73,7 +73,7 @@ function UpdateUser() {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5000/api/${userId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/${userId}`,
         {
           method: "PATCH",
           headers: {
@@ -145,7 +145,11 @@ function UpdateUser() {
           >
             Cancel
           </button>
-          <button className="form-button" type="submit" disabled={!formState.isValid}>
+          <button
+            className="form-button"
+            type="submit"
+            disabled={!formState.isValid}
+          >
             Submit
           </button>
         </div>
@@ -155,5 +159,3 @@ function UpdateUser() {
 }
 
 export default UpdateUser;
-
-

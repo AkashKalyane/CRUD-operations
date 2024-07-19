@@ -34,7 +34,7 @@ function NewUser() {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/`, {
         method: "POST",
         body: JSON.stringify({
           name: formState.inputs.name.value,
