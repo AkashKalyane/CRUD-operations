@@ -9,6 +9,8 @@ require("dotenv").config();
 
 const app = express();
 const PORT = 5000;
+const MONGO_URI =
+  "mongodb+srv://akashkalyane:akash989@cluster0.abbw7rf.mongodb.net/akash?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(bodyParser.json());
 
@@ -38,7 +40,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI || MONGO_URI)
   .then(console.log("Connected to the database"))
   .catch((err) => {
     console.log(err.message);
