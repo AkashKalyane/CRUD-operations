@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 const PORT = 5000;
 const MONGO_URI =
-  "mongodb+srv://akashkalyane:akash989@cluster0.abbw7rf.mongodb.net/akash?retryWrites=true&w=majority&appName=Cluster0";
+  "Provide url here";
 
 app.use(bodyParser.json());
 
